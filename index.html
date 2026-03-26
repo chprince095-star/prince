@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prince Choudhary | Cybersecurity Portfolio</title>
+  <meta name="description"
+    content="Cybersecurity portfolio of Prince Choudhary — Ethical Hacker, Security Analyst, and Penetration Tester. VAPT, Network Security, and Ethical Hacking specialist." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgress"></div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       BOOT SCREEN
+  ═══════════════════════════════════════════════════════ -->
+  <div id="boot-screen">
+    <div class="boot-content">
+      <div class="boot-logo">&lt;/&gt;</div>
+      <div id="boot-lines" class="boot-lines"></div>
+      <div class="boot-cursor">█</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-b">&lt;</span>Prince<span class="logo-s">/</span><span class="logo-b">&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Arsenal</a></li>
+        <li><a href="#experience" class="nav-link">Impact</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#achievements" class="nav-link">Proof</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO — "Securing Digital Worlds"
+  ═══════════════════════════════════════════════════════ -->
+  <section id="hero" data-particles="matrix">
+    <canvas class="section-canvas"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="hero-content hero-split">
+      <!-- LEFT: Profile Image -->
+      <div class="hero-left">
+        <div class="hero-image-wrap">
+          <div class="hero-ring"></div>
+          <div class="hero-ring ring-2"></div>
+          <img src="profile.png" alt="Prince Choudhary" class="hero-img" />
+        </div>
+      </div>
+      <!-- RIGHT: Text Content -->
+      <div class="hero-right">
+        <h1 class="hero-name glitch" data-text="Prince Choudhary">Prince Choudhary</h1>
+        <p class="hero-headline">Securing Digital Worlds</p>
+        <p class="hero-role">Cybersecurity Specialist</p>
+        <p class="hero-typing" id="heroTyping"></p>
+        <div class="hero-btns">
+          <a href="prince_cv.pdf" download="Prince_Choudhary_CV.pdf" class="btn btn-glow"><span
+              class="btn-icon">⬇</span> Download CV</a>
+          <a href="#contact" class="btn btn-ghost"><span class="btn-icon">✉</span> Contact Me</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/prince-choudhary-00888b294" target="_blank" rel="noopener"
+            aria-label="LinkedIn" class="soc-link">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+          <a href="https://github.com/prince-choudhary" target="_blank" rel="noopener" aria-label="GitHub"
+            class="soc-link">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STORY INTRO — "Who I Protect"
+  ═══════════════════════════════════════════════════════ -->
+  <section id="intro" class="section story-intro" data-particles="float">
+    <canvas class="section-canvas"></canvas>
+    <div class="container">
+      <div class="story-quote reveal">
+        <span class="quote-deco">//</span>
+        <h2>Who I Protect</h2>
+        <p>I specialize in securing systems, identifying vulnerabilities, and building resilient digital environments.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       ABOUT — "The Mindset"
+  ═══════════════════════════════════════════════════════ -->
+  <section id="about" class="section" data-particles="float">
+    <canvas class="section-canvas"></canvas>
+    <div class="container">
+      <h2 class="sec-title reveal"><span class="td">//</span> The Mindset</h2>
+      <div class="about-grid">
+        <div class="about-terminal reveal">
+          <div class="term-win">
+            <div class="term-bar">
+              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+              <span class="term-label">prince@kali:~</span>
+            </div>
+            <div class="term-body">
+              <p><span class="ps1">$</span> <span class="cm">cat mindset.txt</span></p>
+              <div class="term-out" id="terminalTyping"></div>
+              <p><span class="ps1">$</span> <span class="caret">█</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="about-cards reveal">
+          <div class="mindset-card">
+            <div class="mc-icon">🛡️</div>
+            <h3>Defensive Thinking</h3>
+            <p>Building secure architectures and hardening systems against evolving threats.</p>
+          </div>
+          <div class="mindset-card">
+            <div class="mc-icon">⚔️</div>
+            <h3>Offensive Security</h3>
+            <p>Finding vulnerabilities before adversaries do through ethical penetration testing.</p>
+          </div>
+          <div class="mindset-card">
+            <div class="mc-icon">🧩</div>
+            <h3>Problem Solver</h3>
+            <p>Analyzing complex systems, reverse-engineering threats, and building real-world solutions.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Stats -->
+      <div class="stats-row reveal">
+        <div class="stat-box">
+          <span class="stat-num" data-count="50">0</span><span class="stat-plus">+</span>
+          <span class="stat-lbl">Vulns Found</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num" data-count="10">0</span><span class="stat-plus">+</span>
+          <span class="stat-lbl">Tools Mastered</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num" data-count="20">0</span><span class="stat-plus">+</span>
+          <span class="stat-lbl">Reports Created</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num" data-count="5">0</span><span class="stat-plus">+</span>
+          <span class="stat-lbl">Certifications</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SKILLS — "Arsenal"
+  ═══════════════════════════════════════════════════════ -->
+  <section id="skills" class="section" data-particles="grid">
+    <canvas class="section-canvas"></canvas>
+    <div class="container">
+      <h2 class="sec-title reveal"><span class="td">//</span> Skills &amp; Arsenal</h2>
+      <div class="skills-grid">
+        <div class="skill-card reveal" style="--delay:.1s">
+          <div class="sc-head"><span class="sc-icon">⌨️</span>
+            <h3>Languages</h3>
+          </div>
+          <div class="sc-tags">
+            <span class="stag">C++</span><span class="stag">JavaScript</span>
+            <span class="stag">C</span><span class="stag">PHP</span>
+          </div>
+        </div>
+        <div class="skill-card reveal" style="--delay:.2s">
+          <div class="sc-head"><span class="sc-icon">🧩</span>
+            <h3>Frameworks &amp; Web</h3>
+          </div>
+          <div class="sc-tags">
+            <span class="stag">HTML5</span><span class="stag">CSS3</span>
+            <span class="stag">Node.js</span><span class="stag">React</span>
+          </div>
+        </div>
+        <div class="skill-card reveal" style="--delay:.3s">
+          <div class="sc-head"><span class="sc-icon">🔧</span>
+            <h3>Security Tools</h3>
+          </div>
+          <div class="sc-tags">
+            <span class="stag">Burp Suite</span><span class="stag">Wireshark</span>
+            <span class="stag">OWASP ZAP</span><span class="stag">Kali Linux</span>
+            <span class="stag">Nmap</span><span class="stag">Snort</span>
+            <span class="stag">Cisco Packet Tracer</span>
+          </div>
+        </div>
+        <div class="skill-card reveal" style="--delay:.4s">
+          <div class="sc-head"><span class="sc-icon">🧠</span>
+            <h3>Soft Skills</h3>
+          </div>
+          <div class="sc-tags">
+            <span class="stag">Problem Solving</span><span class="stag">Teamwork</span>
+            <span class="stag">Project Management</span><span class="stag">Adaptability</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       EXPERIENCE — "Real-World Impact"
+  ═══════════════════════════════════════════════════════ -->
+  <section id="experience" class="section" data-particles="float">
+    <canvas class="section-canvas"></canvas>
+    <div class="container">
+      <h2 class="sec-title reveal"><span class="td">//</span> Experience &amp; Impact</h2>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-dot"><span class="tl-pulse"></span></div>
+          <div class="tl-card">
+            <span class="tl-badge">MISSION 01</span>
+            <span class="tl-date">March 2023 – Present</span>
+            <h3>Cybersecurity Intern</h3>
+            <h4>Cybrary Labs</h4>
+            <ul>
+              <li>Performed VAPT on enterprise environments identifying critical vulnerabilities</li>
+              <li>Discovered XSS, SQL Injection, and IDOR vulnerabilities in live applications</li>
+              <li>Utilized Burp Suite, Wireshark, and OWASP tools for comprehensive assessments</li>
+              <li>Created professional vulnerability reports with remediation strategies</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"><span class="tl-pulse"></span></div>
+          <div class="tl-card">
+            <span class="tl-badge">MISSION 02</span>
+            <span class="tl-date">April 2022 – March 2023</span>
+            <h3>Network Security Intern</h3>
+            <h4>TechDefence</h4>
+            <ul>
+              <li>Monitored network traffic using Wireshark to detect anomalies and threats</li>
+              <li>Configured firewalls and intrusion detection systems (Snort)</li>
+              <li>Set up VPN tunnels for secure enterprise communication</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       PROJECTS — "Security Tools Built"
+  ═══════════════════════════════════════════════════════ -->
+  <section id="projects" class="section" data-particles="grid">
+    <canvas class="section-canvas"></canvas>
+    <div class="container">
+      <h2 class="sec-title reveal"><span class="td">//</span> Security Tools &amp; Projects</h2>
+      <div class="projects-grid">
+        <div class="proj-card reveal" id="projCard1">
+          <div class="proj-inner">
+            <div class="proj-front">
+              <div class="proj-head">
+                <span class="proj-icon">🔍</span>
+                <a href="https://github.com/prince-choudhary" target="_blank" rel="noopener" class="proj-gh"
+                  aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                    <path
+                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                  </svg>
+                </a>
+              </div>
+              <h3>Vulnerability Scanner &amp; Exploit Analyzer</h3>
+              <p>Python-based automated scanner detecting open ports, weak credentials, and outdated services.
+                Integrated with Nmap and socket programming. Features CVE lookup and generates JSON/HTML reports.</p>
+              <div class="proj-tags">
+                <span>Python</span><span>Nmap</span><span>Sockets</span><span>JSON</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       ACHIEVEMENTS — "Proof of Skill"
+  ═══════════════════════════════════════════════════════ -->
+  <section id="achievements" class="section" data-particles="float">
+    <canvas class="section-canvas"></canvas>
+    <div class="container">
+      <h2 class="sec-title reveal"><span class="td">//</span> Achievements &amp; Recognition</h2>
+      <div class="achv-grid">
+        <div class="achv-card reveal">
+          <div class="achv-icon">🌍</div>
+          <div class="achv-num" data-count="557">#0</div>
+          <h3>Global Rank</h3>
+          <p>Among 4000+ participants — Starters 76 Div3</p>
+        </div>
+        <div class="achv-card reveal">
+          <div class="achv-icon">🎓</div>
+          <div class="achv-num" data-count="30">0</div>
+          <h3>Top 30%</h3>
+          <p>Academic ranking at University</p>
+        </div>
+        <div class="achv-card reveal">
+          <div class="achv-icon">🥉</div>
+          <div class="achv-num" data-count="3">#0</div>
+          <h3>3rd Rank — Hackathon</h3>
+          <p>HACKOVERFLOW 5.0 — NIT Durgapur</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CERTIFICATIONS — "Continuous Learning"
+  ═══════════════════════════════════════════════════════ -->
+  <section id="certifications" class="section" data-particles="grid">
+    <canvas class="section-canvas"></canvas>
+    <div class="container">
+      <h2 class="sec-title reveal"><span class="td">//</span> Continuous Learning</h2>
+      <div class="cert-grid">
+        <div class="cert-card reveal">
+          <div class="cert-badge-icon">
+            <svg viewBox="0 0 64 64" width="48" height="48">
+              <circle cx="32" cy="32" r="28" fill="none" stroke="var(--neon-green)" stroke-width="2" />
+              <path d="M22 33l7 7 13-14" fill="none" stroke="var(--neon-green)" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3>Complete Interview Preparation (C++)</h3>
+          <p>GeeksforGeeks</p>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-badge-icon">
+            <svg viewBox="0 0 64 64" width="48" height="48">
+              <circle cx="32" cy="32" r="28" fill="none" stroke="var(--neon-cyan)" stroke-width="2" />
+              <path d="M22 33l7 7 13-14" fill="none" stroke="var(--neon-cyan)" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3>100 Days of Code — Python Bootcamp</h3>
+          <p>Udemy</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       EDUCATION
+  ═══════════════════════════════════════════════════════ -->
+  <section id="education" class="section" data-particles="float">
+    <canvas class="section-canvas"></canvas>
+    <div class="container">
+      <h2 class="sec-title reveal"><span class="td">//</span> Education</h2>
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-icon">🎓</div>
+          <h3>B.Tech — Computer Science &amp; Engineering</h3>
+          <p class="edu-place">Lovely Professional University</p>
+          <p class="edu-score">CGPA: 6.98</p>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-icon">🏫</div>
+          <h3>Intermediate (XII)</h3>
+          <p class="edu-place">Kendriya Vidyalaya, Ghaziabad</p>
+          <p class="edu-score">85.6%</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CONTACT — "Let's Secure Your System"
+  ═══════════════════════════════════════════════════════ -->
+  <section id="contact" class="section" data-particles="glow">
+    <canvas class="section-canvas"></canvas>
+    <div class="container">
+      <h2 class="sec-title reveal"><span class="td">//</span> Let's Secure Your System</h2>
+      <p class="contact-sub reveal">Have a project, question, or want to collaborate? Drop me a message.</p>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="ci-item">
+            <span class="ci-icon">📧</span>
+            <div>
+              <h4>Email</h4><a href="mailto:chprince095@gmail.com">chprince095@gmail.com</a>
+            </div>
+          </div>
+          <div class="ci-item">
+            <span class="ci-icon">📱</span>
+            <div>
+              <h4>Phone</h4><a href="tel:+918178025870">+91-8178025870</a>
+            </div>
+          </div>
+          <div class="ci-item">
+            <span class="ci-icon">🔗</span>
+            <div>
+              <h4>LinkedIn</h4><a href="https://www.linkedin.com/in/prince-choudhary-00888b294" target="_blank"
+                rel="noopener">prince-choudhary</a>
+            </div>
+          </div>
+          <div class="ci-item">
+            <span class="ci-icon">🐙</span>
+            <div>
+              <h4>GitHub</h4><a href="https://github.com/prince-choudhary" target="_blank"
+                rel="noopener">prince-choudhary</a>
+            </div>
+          </div>
+        </div>
+        <form id="contactForm" class="contact-form reveal" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="218c590a-6009-4a17-8d5c-b036acad4f47" />
+          <input type="hidden" name="subject" value="New Contact from Cybersecurity Portfolio" />
+          <input type="hidden" name="from_name" value="Portfolio Contact Form" />
+          <div class="fg">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required />
+          </div>
+          <div class="fg">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+          </div>
+          <div class="fg">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-glow btn-wide">
+            <span>Send Message</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <p class="footer-logo"><span class="logo-b">&lt;</span>Prince<span class="logo-s">/</span><span
+          class="logo-b">&gt;</span></p>
+      <p class="footer-copy">&copy; 2026 Prince Choudhary. All rights reserved.</p>
+      <div class="footer-soc">
+        <a href="https://www.linkedin.com/in/prince-choudhary-00888b294" target="_blank" rel="noopener"
+          aria-label="LinkedIn" class="soc-link sm">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+        </a>
+        <a href="https://github.com/prince-choudhary" target="_blank" rel="noopener" aria-label="GitHub"
+          class="soc-link sm">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
